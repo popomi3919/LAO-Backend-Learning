@@ -27,8 +27,14 @@ class Stock{
         }
     }
 
-    public int rechercherProduit(String nomProduit){
-        return produits.getOrDefault(nomProduit,0);
+    public void rechercherProduit(String nomProduit){
+        String valeur = String.valueOf(produits.get(nomProduit));
+        if(valeur != null){
+            System.out.println("il y a " + valeur + " produit de " + nomProduit);
+        } else {
+            System.out.println("la clé n'existe pas");
+        }
+
     }
 
     public void afficherStock() {
@@ -46,16 +52,21 @@ public class Exercise_5 {
         stock.ajouterProduit("PC", 20);
         stock.ajouterProduit("table", 10);
         stock.ajouterProduit("Chaussure", 0);
+        System.out.println("Stock");
         stock.afficherStock();
 
         System.out.println("\n");
+        System.out.println("\n Stock apres mofification");
         stock.modifierProduit("Chaussure", 10);
         stock.afficherStock();
 
+
         System.out.println("\n");
+        System.out.println("\n stock apres suprrésiion de table");
         stock.retirerProduit("table");
         stock.afficherStock();
 
+        System.out.println("\n RECHERCHE");
         stock.rechercherProduit("Ananas");
     }
 }
