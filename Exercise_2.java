@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
 
 public class Exercise_2 {
     public static void main(String[] args){
@@ -18,11 +16,21 @@ public class Exercise_2 {
         liste.add(2);
         liste.add(50);
 
-        Collections.sort(liste);
-
-        HashSet<Integer> listeSansDoublon = new HashSet<>(liste);
-
         System.out.println("Collection avant supression: " + liste);
-        System.out.println("Collection aprés supression: " + listeSansDoublon);
+
+        ArrayList<Integer> list = new ArrayList<>(liste);
+
+        liste.clear();
+
+        for (int k  : list) {
+            if(!liste.contains(k)){
+                liste.add(k);
+            } else {
+                liste.remove((Integer) k);
+            }
+        }
+
+
+        System.out.println("Collection aprés supression: " + liste);
      }
 }
