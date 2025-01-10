@@ -28,7 +28,7 @@ public class Exercise_9 {
         System.out.println("Liste: ");
 
 
-        Map<String, String> mapEtudiants =new HashMap<>();
+        HashMap<String, String> mapEtudiants =new HashMap<>();
 
         for (Etudiant e: listeEtudiant){
             mapEtudiants.put(e.id, e.nom);

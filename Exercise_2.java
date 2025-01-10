@@ -25,8 +25,6 @@ public class Exercise_2 {
         for (int k  : list) {
             if(!liste.contains(k)){
                 liste.add(k);
-            } else {
-                liste.remove((Integer) k);
             }
         }
 

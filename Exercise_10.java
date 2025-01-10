@@ -5,14 +5,14 @@ import java.util.Set;
 
 public class Exercise_10 {
     public static void main(String[] args){
-        Map<String, Set<String>> categories = new HashMap<>();
+        HashMap<String, Set<String>> categories = new HashMap<>();
 
-        Set<String> sports = new HashSet<>();
+        HashSet<String> sports = new HashSet<>();
         sports.add("Football");
         sports.add("Basketball");
         sports.add("Baseball");
 
-        Set<String> technologies = new HashSet<>();
+        HashSet<String> technologies = new HashSet<>();
         technologies.add("Java");
         technologies.add("Python");
         technologies.add("Javascript");

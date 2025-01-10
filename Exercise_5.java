@@ -1,8 +1,10 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.HashMap;
 import java.util.Map;
 
 class Stock{
-    Map<String, Integer> produits;
+    HashMap<String, Integer> produits;
     public Stock(){
         produits = new HashMap<>();
     }
@@ -28,13 +30,17 @@ class Stock{
     }
 
     public void rechercherProduit(String nomProduit){
-        String valeur = String.valueOf(produits.get(nomProduit));
-        if(valeur != null){
-            System.out.println("il y a " + valeur + " produit de " + nomProduit);
-        } else {
-            System.out.println("la clé n'existe pas");
+        boolean trouver = false;
+        for (Map.Entry<String, Integer> entry : produits.entrySet()){
+            if (entry.getKey() == nomProduit){
+                trouver = true;
+                System.out.println("Il y en a : " + entry.getValue() + " " + entry.getKey() + " en stock ");
+                break;
+            }
         }
-
+        if (!trouver){
+            System.out.println("Ce produit n'existe pas en stock");
+        }
     }
 
     public void afficherStock() {
@@ -52,21 +58,17 @@ public class Exercise_5 {
         stock.ajouterProduit("PC", 20);
         stock.ajouterProduit("table", 10);
         stock.ajouterProduit("Chaussure", 0);
-        System.out.println("Stock");
         stock.afficherStock();
 
         System.out.println("\n");
-        System.out.println("\n Stock apres mofification");
         stock.modifierProduit("Chaussure", 10);
         stock.afficherStock();
 
-
         System.out.println("\n");
-        System.out.println("\n stock apres suprrésiion de table");
         stock.retirerProduit("table");
         stock.afficherStock();
 
-        System.out.println("\n RECHERCHE");
-        stock.rechercherProduit("Ananas");
+        System.out.println("\n");
+        stock.rechercherProduit("table");
     }
 }

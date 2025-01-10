@@ -8,7 +8,7 @@ public class Exercise_3 {
         System.out.print("Veuillez saisir une phrase: ");
         String phrase = scanner.nextLine();
 
-        String[] mots = phrase.split("\\s+");
+        String[] mots = phrase.split(" ");
 
         HashMap<String, Integer> occurenceMot = new HashMap<>();
 

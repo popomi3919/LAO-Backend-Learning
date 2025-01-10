@@ -8,7 +8,7 @@ public class Exercise_7 {
         ArrayList<String> collection1 = new ArrayList<>(Arrays.asList("A", "B", "C", "F", "P", "F", "A"));
         HashSet<String> collection2 = new HashSet<>(Arrays.asList("Q", "R", "T", "A", "B", "P", "N"));
 
-        Set<String> elementCommun = new HashSet<>(collection1);
+        HashSet<String> elementCommun = new HashSet<>(collection1);
         elementCommun.retainAll(collection2);
         System.out.println("Elements Commun: " + elementCommun);
 
