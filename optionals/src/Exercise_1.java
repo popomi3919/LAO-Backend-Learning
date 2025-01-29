@@ -6,15 +6,16 @@ import java.util.Optional;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Exercise_1 {
     public static Optional<String> getGreetings(){
-        String message = "Hello!";
+        String message = "Hello";
+        String nullMessage = null;
         Optional<String> checker = Optional.ofNullable(message);
-        if (checker.isPresent()){
-            return Optional.of(message);
-        } else {
-            return Optional.empty();
-        }
+        return checker;
     }
     public static void main(String[] args){
-        System.out.println(getGreetings());
+        if (getGreetings().isPresent()){
+            System.out.println(getGreetings().get());
+        } else {
+            System.out.println(Optional.empty());
+        }
     }
 }

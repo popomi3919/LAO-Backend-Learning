@@ -12,27 +12,38 @@ class User{
         this.name = name;
     }
 
-    public  static void displayResult(long id){
-
+    public String getName() {
+        return name;
     }
 
-    public static Optional<User> findById(long id){
-        List<User> listOfUser = new ArrayList<>();
-        listOfUser.add(new User(1,"John"));
-        listOfUser.add(new User(2,"Roy"));
-        listOfUser.add(new User(3,"Jean"));
-        listOfUser.add(new User(4,"Pierre"));
-        for (User u : listOfUser){
+    public static Optional<User> findById(long id, List<User> users){
+        for (User u : users){
             if (id == u.id){
                 return Optional.of(u);
             }
         }
         return Optional.empty();
     }
+
+    public static String displayUser(long id, List<User> user){
+        String resultat = User.findById(id, user)
+                .map(User::getName).orElse("Utilisateur Introuvable");
+        return resultat;
+    }
 }
 
 public class Exercise_9 {
     public static void main(String[] args){
-        System.out.println(User.findById(3));
+        List<User> users = new ArrayList<>();
+        users.add(new User(20, "John"));
+        users.add(new User(60, "Elton"));
+        users.add(new User(50, "Booth"));
+        users.add(new User(40,"Ryan"));
+
+        User.findById(60, users);
+        System.out.println(User.displayUser(60, users));
+
+        User.findById(30, users);
+        System.out.println(User.displayUser(30, users));
     }
 }

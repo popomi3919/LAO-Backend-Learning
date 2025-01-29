@@ -13,7 +13,7 @@ public class Exercise_6 {
     }
     public static void main(String[] args){
         System.out.println(checkValues(Optional.of(5)));
-        System.out.println(checkValues(Optional.of(15)));
+        System.out.println(checkValues(Optional.of(15)).get());
         System.out.println(checkValues(Optional.empty()));
     }
 }

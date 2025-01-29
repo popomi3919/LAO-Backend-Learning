@@ -1,13 +1,13 @@
 package optionals.src;
 
 import java.util.Optional;
-import java.util.Scanner;
+
 
 public class Exercise_4 {
     public static void checkDoubles(Optional<Integer> number){
         Optional<Integer> even = number.filter(y -> y % 2 == 0);
         if(even.isPresent()){
-            System.out.println(number);
+            System.out.println(number.get());
         } else {
             System.out.println("Nombre impair ou absent");
         }

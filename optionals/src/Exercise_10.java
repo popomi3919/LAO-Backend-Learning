@@ -1,6 +1,5 @@
 package optionals.src;
 
-import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -11,16 +10,17 @@ public class Exercise_10 {
         List<Integer> numbers = new ArrayList<>();
         numbers.add(33);
         numbers.add(5);
-//        numbers.add(10);
-//        numbers.add(18);
+        numbers.add(10);
+        numbers.add(18);
         numbers.add(19);
-//        numbers.add(4);
+        numbers.add(4);
         numbers.add(17);
 
         Stream<Integer> convertion = numbers.stream().filter(i -> i % 2 == 0);
-        Optional<Integer> output = convertion.findFirst().orElse(0).describeConstable();
+        Optional<Integer> output = convertion.findFirst();
+        int outputAlternative = output.orElse(0);
 
-        System.out.println(output);
+        System.out.println(outputAlternative);
 
     }
 }

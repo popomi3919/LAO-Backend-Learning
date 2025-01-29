@@ -13,6 +13,6 @@ public class Exercise_8 {
     }
     public static void main(String[] args){
         System.out.println(conversion("t"));
-        System.out.println(conversion("320"));
+        System.out.println(conversion("320").get());
     }
 }
