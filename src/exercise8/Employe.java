@@ -1,4 +1,4 @@
-package exercise8;
+package src.exercise8;
 
 public class Employe {
     String nom;

@@ -1,4 +1,4 @@
-package exercise9;
+package src.exercise9;
 
 public class Produit {
     String nom;

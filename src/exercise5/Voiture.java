@@ -1,4 +1,4 @@
-package exercise5;
+package src.exercise5;
 
 public class Voiture extends Vehicule{
     public Voiture(int id, String marque, String modele, int année, boolean disponibilité) {

@@ -1,4 +1,4 @@
-package exercise9;
+package src.exercise9;
 
 public class Exercise9 {
     public static void main(String[] args){

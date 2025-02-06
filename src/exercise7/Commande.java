@@ -1,4 +1,4 @@
-package exercise7;
+package src.exercise7;
 
 public class Commande {
     int numeroDeCommande;

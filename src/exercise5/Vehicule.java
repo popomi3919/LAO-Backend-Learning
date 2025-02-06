@@ -1,4 +1,4 @@
-package exercise5;
+package src.exercise5;
 
 public class Vehicule {
     int id;
