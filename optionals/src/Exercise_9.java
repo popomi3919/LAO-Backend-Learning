@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Optional;
 
 class User{
-    long id;
-    String name;
+    private long id;
+    private String name;
     public User(long id, String name){
         this.id = id;
         this.name = name;
